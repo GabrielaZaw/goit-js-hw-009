@@ -10,7 +10,7 @@ const stopButton = document.querySelector('[data-stop]');
 startButton.addEventListener('click', () => {
   if (intervalId) return;
 
-  // Zablokuj przycisk Start, aby nie można było go wielokrotnie klikać
+  // Blokuje przycisk Start, aby nie można było go wielokrotnie klikać
   startButton.disabled = true;
   stopButton.disabled = false;
 
@@ -21,11 +21,11 @@ startButton.addEventListener('click', () => {
 });
 
 stopButton.addEventListener('click', () => {
-  // Zatrzymaj zmianę koloru tła
+  // Zatrzymaje zmianę koloru tła
   clearInterval(intervalId);
   intervalId = null;
 
-  // Odblokuj przycisk Start
+  // Odblokowuje przycisk Start
   startButton.disabled = false;
   stopButton.diasbled = true;
 });
